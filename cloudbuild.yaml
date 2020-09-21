@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/automl-200918-1217/flask-demo', '.']
-images: ['gcr.io/automl-200918-1217/flask-demo']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/flask-demo', '.']
+images: ['gcr.io/$PROJECT_ID/flask-demo']
