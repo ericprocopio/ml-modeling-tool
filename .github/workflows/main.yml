@@ -6,7 +6,7 @@ on:
     - master
 
 env:
-  PROJECT_ID: ${{ secrets.GCE_PROJECT }}
+  PROJECT_ID: ${{ secrets.PROJECT_ID }}
 
 jobs:
   setup-build-publish-deploy:
@@ -22,7 +22,7 @@ jobs:
       with:
         version: '290.0.1'
         service_account_key: ${{ secrets.CB_SERVICE_ACCOUNT }}
-        project_id: ${{ secrets.$PROJECT_ID }}
+        project_id: ${{ secrets.PROJECT_ID }}
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
