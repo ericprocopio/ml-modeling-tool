@@ -35,4 +35,4 @@ jobs:
     # Push the Docker image to Google Container Registry
     - name: Publish
       run: |-
-        docker push "gcr.io/$PROJECT_ID/github-flask-demo" .
+        docker push "gcr.io/$PROJECT_ID/github-flask-demo"
