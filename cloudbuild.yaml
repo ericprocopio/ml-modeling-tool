@@ -5,6 +5,9 @@ steps:
 # Push the container to GCR
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/cloud-build-flask-demo']
-#images: ['gcr.io/$PROJECT_ID/cloud-build-flask-demo']
+# Deploy container to CloudRun
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'flask-demoE', '--image', 'gcr.io/$PROJECT_ID/cloud-build-flask-demo', '--region', 'us-east1', '--platform', 'managed']
 images:
 - gcr.io/$PROJECT_ID/cloud-build-flask-demo
