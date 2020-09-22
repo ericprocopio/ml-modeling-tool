@@ -1,10 +1,10 @@
 steps:
 # Build the container
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/cloud-build-flask-demo/', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/cloud-build-flask-demo', '.']
 # Push the container to GCR
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/cloud-build-flask-demo/']
+  args: ['push', 'gcr.io/$PROJECT_ID/cloud-build-flask-demo']
 #images: ['gcr.io/$PROJECT_ID/cloud-build-flask-demo']
 images:
 - gcr.io/$PROJECT_ID/cloud-build-flask-demo/
