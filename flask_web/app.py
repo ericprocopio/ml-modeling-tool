@@ -9,4 +9,4 @@ def hello_world():
     return "Flask is running in GCP!!"
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0')

@@ -11,3 +11,5 @@ COPY flask_web /app
 ENTRYPOINT [ "python" ]
 
 CMD [ "app.py" ]
+
+EXPOSE 8080/tcp
