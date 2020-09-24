@@ -18,5 +18,7 @@ steps:
     - 'us-east1'
     - '--platform'
     - 'managed'
+    - '--service-account'
+    - 'flask-demo-account@automl-200918-1217.iam.gserviceaccount.com'
 images:
 - gcr.io/$PROJECT_ID/cloud-build-flask-demo
