@@ -8,18 +8,18 @@ steps:
 # Deploy container to CloudRun
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: 
-    - 'run'
-    - 'deploy'
-    - 'flask-demo'
-    - '--image'
-    - 'gcr.io/$PROJECT_ID/cloud-build-flask-demo'
-    - '--region'
-    - 'us-east1'
-    - '--platform'
-    - 'managed'
-    - '--service-account'
-    - 'flask-demo-account@automl-200918-1217.iam.gserviceaccount.com'
-    - '--allow-unauthenticated'
+#  args: 
+#    - 'run'
+#    - 'deploy'
+#    - 'flask-demo'
+#    - '--image'
+#    - 'gcr.io/$PROJECT_ID/cloud-build-flask-demo'
+#    - '--region'
+#    - 'us-east1'
+#    - '--platform'
+#    - 'managed'
+#    - '--service-account'
+#    - 'flask-demo-account@automl-200918-1217.iam.gserviceaccount.com'
+#    - '--allow-unauthenticated'
 images:
 - gcr.io/$PROJECT_ID/cloud-build-flask-demo
